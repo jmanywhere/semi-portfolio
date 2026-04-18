@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "work": "Trabajo",
+    "writing": "Escritura",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "name": "Semi Fernandez",
+    "role": "Ingeniero Senior",
+    "tagline": "Construyo sistemas de producción en blockchain, frontend y backend — y la infraestructura que los mantiene funcionando.",
+    "pillars": {
+      "blockchain": "Blockchain",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "other": "Otros"
+    },
+    "cta_work": "Trabajo seleccionado",
+    "cta_writing": "Escritura"
+  },
+  "pillars": {
+    "title": "Lo que hago",
+    "blockchain": {
+      "title": "Blockchain",
+      "summary": "EVM · Solana · TON. Infraestructura multicadena, integraciones de billetera, flujos sin gas y sistemas de pago no custodiales. Sistemas que procesan $1M/día en volumen de transacciones."
+    },
+    "frontend": {
+      "title": "Frontend",
+      "summary": "React · Next.js · TypeScript. Traduzco flujos de transacciones complejos en interfaces rápidas e intuitivas. Tiempo de carga reducido de 80s a 5s. −50% de abandono en onboarding."
+    },
+    "backend": {
+      "title": "Backend",
+      "summary": "Node.js · AWS (Fargate, SQS, Lambda, Aurora, DynamoDB, Redis). APIs adoptadas por más de 100 equipos. Propiedad end-to-end desde la arquitectura hasta la respuesta a incidentes."
+    },
+    "other": {
+      "title": "Otros",
+      "summary": "Enseñanza en uDevHouse. Revisiones de seguridad de contratos inteligentes. Formación en ingeniería electrónica. Fundador y CTO de dos empresas."
+    }
+  },
+  "projects": {
+    "title": "Trabajo seleccionado",
+    "view_all": "Todos los proyectos",
+    "view_project": "Ver proyecto"
+  },
+  "writing": {
+    "title": "Escritura",
+    "view_all": "Todas las publicaciones",
+    "read": "Leer"
+  },
+  "values": {
+    "title": "Cómo trabajo",
+    "transparency": {
+      "label": "Transparencia",
+      "body": "Comparto números reales, compromisos reales y limitaciones reales. Sin afirmaciones infladas."
+    },
+    "directness": {
+      "label": "Directness",
+      "body": "Digo lo que pienso. Alcance claro, plazos honestos, sin adornos en la comunicación."
+    },
+    "equality": {
+      "label": "Igualdad",
+      "body": "He construido para 53 países, mentoreado ingenieros en LATAM, y creo que el buen software debe funcionar para todos."
+    },
+    "privacy": {
+      "label": "Privacidad",
+      "body": "Construyo sistemas no custodiales y evito la recopilación innecesaria de datos — en mis productos y en este sitio."
+    }
+  },
+  "contact": {
+    "title": "Hablemos",
+    "body": "Abierto a nuevos proyectos, colaboraciones y conversaciones.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "built_with": "Construido con Next.js 16 · Tailwind v4 · Desplegado en Vercel"
+  }
+}

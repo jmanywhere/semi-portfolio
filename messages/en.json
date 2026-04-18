@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "work": "Work",
+    "writing": "Writing",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Semi Fernandez",
+    "role": "Senior Engineer",
+    "tagline": "I build production systems across blockchain, frontend, and backend — and the infrastructure that keeps them running.",
+    "pillars": {
+      "blockchain": "Blockchain",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "other": "Other"
+    },
+    "cta_work": "Selected work",
+    "cta_writing": "Writing"
+  },
+  "pillars": {
+    "title": "What I do",
+    "blockchain": {
+      "title": "Blockchain",
+      "summary": "EVM · Solana · TON. Multichain infrastructure, wallet integrations, gasless flows, and non-custodial payment systems. Built systems handling $1M/day in transaction volume."
+    },
+    "frontend": {
+      "title": "Frontend",
+      "summary": "React · Next.js · TypeScript. I translate complex transaction flows into fast, intuitive interfaces. 80s → 5s load time fix. −50% onboarding churn."
+    },
+    "backend": {
+      "title": "Backend",
+      "summary": "Node.js · AWS (Fargate, SQS, Lambda, Aurora, DynamoDB, Redis). APIs adopted by 100+ integrating teams. End-to-end ownership from architecture to incident response."
+    },
+    "other": {
+      "title": "Other",
+      "summary": "Teaching at uDevHouse. Smart-contract security reviews. Electronics engineering background. Founder and CTO of two companies."
+    }
+  },
+  "projects": {
+    "title": "Selected work",
+    "view_all": "All projects",
+    "view_project": "View project"
+  },
+  "writing": {
+    "title": "Writing",
+    "view_all": "All posts",
+    "read": "Read"
+  },
+  "values": {
+    "title": "How I work",
+    "transparency": {
+      "label": "Transparency",
+      "body": "I share real numbers, real tradeoffs, and real limitations. No inflated claims."
+    },
+    "directness": {
+      "label": "Directness",
+      "body": "I say what I mean. Clear scope, honest timelines, no fluff in communication."
+    },
+    "equality": {
+      "label": "Equality",
+      "body": "I've built for 53 countries, mentored engineers across LATAM, and I believe good software should work for everyone."
+    },
+    "privacy": {
+      "label": "Privacy",
+      "body": "I build non-custodial systems and avoid unnecessary data collection — in my products and in my own site."
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "body": "Open to new projects, collaborations, and conversations.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "built_with": "Built with Next.js 16 · Tailwind v4 · Deployed on Vercel"
+  }
+}
