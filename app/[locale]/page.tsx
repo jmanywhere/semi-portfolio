@@ -1,4 +1,18 @@
 import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import { Nav } from "@/components/nav";
+import { Hero } from "@/components/hero";
+import { Pillars } from "@/components/pillars";
+import { Work } from "@/components/work";
+import { About } from "@/components/about";
+import { Values } from "@/components/values";
+import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
+import { Mascot } from "@/components/mascot";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -9,24 +23,18 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main id="main" className="flex flex-col">
-      {/* Phase 2: sections go here */}
-      <section className="min-h-dvh flex items-center justify-center px-6">
-        <div className="max-w-2xl">
-          <p className="font-mono text-xs text-muted-foreground mb-4 tracking-widest uppercase">
-            semi.engineer
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-foreground mb-4">
-            Semi Fernandez
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Senior Engineer — Blockchain · Frontend · Backend
-          </p>
-          <p className="mt-6 text-sm text-muted-foreground/60 font-mono">
-            Phase 1 complete — content coming in Phase 2
-          </p>
-        </div>
-      </section>
-    </main>
+    <>
+      <Nav />
+      <main id="main" className="flex flex-col">
+        <Hero />
+        <Pillars />
+        <Work />
+        <About />
+        <Values />
+        <Contact />
+      </main>
+      <Footer />
+      <Mascot />
+    </>
   );
 }

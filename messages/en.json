@@ -1,22 +1,25 @@
 {
   "nav": {
     "work": "Work",
-    "writing": "Writing",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "toggle_theme": "Toggle theme",
+    "switch_lang": "Cambiar a Español"
   },
   "hero": {
     "name": "Semi Fernandez",
-    "role": "Senior Engineer",
+    "role": "Senior Software Engineer",
     "tagline": "I build production systems across blockchain, frontend, and backend — and the infrastructure that keeps them running.",
-    "pillars": {
-      "blockchain": "Blockchain",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "other": "Other"
-    },
     "cta_work": "Selected work",
-    "cta_writing": "Writing"
+    "cta_contact": "Get in touch",
+    "stat_1_value": "$1M+/day",
+    "stat_1_label": "transaction volume",
+    "stat_2_value": "100+",
+    "stat_2_label": "integrating teams",
+    "stat_3_value": "53",
+    "stat_3_label": "countries",
+    "stat_4_value": "80s → 5s",
+    "stat_4_label": "load time fix"
   },
   "pillars": {
     "title": "What I do",
@@ -39,13 +42,72 @@
   },
   "projects": {
     "title": "Selected work",
-    "view_all": "All projects",
-    "view_project": "View project"
+    "items": {
+      "payments": {
+        "title": "Multichain Payment Infrastructure",
+        "desc": "Non-custodial payment system across EVM and Solana. Handles up to $1M/day in transaction volume with gasless flows, wallet integrations, and full monitoring coverage."
+      },
+      "platform": {
+        "title": "Developer Platform & API",
+        "desc": "Multi-team API platform and developer tooling adopted by 100+ integrating teams. Full ownership from system design through incident response and on-call."
+      },
+      "onboarding": {
+        "title": "Global Onboarding System",
+        "desc": "Rebuilt transaction and onboarding flows across 53 countries. Cut page load from ~80s to 5s and reduced onboarding churn by 50%."
+      }
+    }
   },
-  "writing": {
-    "title": "Writing",
-    "view_all": "All posts",
-    "read": "Read"
+  "about": {
+    "title": "About",
+    "bio_p1": "Senior software engineer with 8+ years building production systems across frontend, backend, and blockchain infrastructure. My work has focused on multichain products, payment flows, developer platforms, and wallet-adjacent experiences across EVM, Solana, and other ecosystems.",
+    "bio_p2": "I bring strong end-to-end ownership, practical product sense, and a bias toward building systems that are both technically sound and usable in the real world.",
+    "location": "Guatemala City, Guatemala",
+    "certs_title": "Certifications",
+    "cert_1": "Unifi Wireless Network Design Certified",
+    "cert_2": "Solidity 101 — Professor, uDevHouse",
+    "eng_title": "Engineering career",
+    "exp_vudy_role": "Tech Lead",
+    "exp_vudy_org": "Vudy",
+    "exp_vudy_period": "2024 – Present",
+    "exp_vudy_desc": "Built product architecture from scratch, owned observability on a live system processing $1M/day, and shipped gasless payment flows across 8+ EVM networks.",
+    "exp_u3tech_role": "Founder & CTO",
+    "exp_u3tech_org": "U3 Tech",
+    "exp_u3tech_period": "2024 – Present",
+    "exp_u3tech_desc": "Web3 payment infrastructure for LATAM businesses. Multichain dApp frontends and backend systems serving users across 53 countries.",
+    "exp_udevhouse_role": "Founder & CEO",
+    "exp_udevhouse_org": "uDevHouse",
+    "exp_udevhouse_period": "2023 – Present",
+    "exp_udevhouse_desc": "Engineering education platform for production-grade full-stack and Web3 development. Mentored engineers across frontend, dApp, and smart contract domains.",
+    "exp_freelance_role": "Full-Stack & Web3 Engineer",
+    "exp_freelance_org": "Freelance",
+    "exp_freelance_period": "2021 – 2023",
+    "exp_freelance_desc": "Shipped features across 10+ production projects — React dApps, wallet integrations, event-driven pipelines, and smart contract security reviews across EVM, Solana, and TON.",
+    "exp_anywhere_role": "Frontend & Process Developer",
+    "exp_anywhere_org": "Anywhere Inc.",
+    "exp_anywhere_period": "2018 – 2021",
+    "exp_anywhere_desc": "Rebuilt core platform workflows and dashboards used across multiple countries, modernizing the frontend with a focus on usability for non-technical stakeholders.",
+    "earlier_title": "Before software",
+    "earlier_intro": "Before full-time engineering I repaired avionics electronics, designed wireless networks for commercial buildings, helped run a tourism company, and spent two years making coffee.",
+    "exp_barista_role": "Barista",
+    "exp_barista_org": "Guatemala City",
+    "exp_barista_period": "2009 – 2011",
+    "exp_barista_desc": "Front-of-house service and coffee craft.",
+    "exp_avionics_role": "Electronics Technician",
+    "exp_avionics_org": "Avionics Shop",
+    "exp_avionics_period": "~1 year",
+    "exp_avionics_desc": "Electronic component repair and maintenance for aviation equipment.",
+    "exp_audio_role": "Network & Audio Installer",
+    "exp_audio_org": "Independent",
+    "exp_audio_period": "",
+    "exp_audio_desc": "Designed and installed enterprise wireless networks for Torre Barcelona and the Condado Naranjo offices in Guatemala City. Multiple private home audio and network installations. Unifi certified.",
+    "exp_autoshop_role": "Technician",
+    "exp_autoshop_org": "Auto Shop",
+    "exp_autoshop_period": "",
+    "exp_autoshop_desc": "Hands-on technical work in an automotive environment.",
+    "exp_tourism_role": "Business Development & Data Analyst",
+    "exp_tourism_org": "Guatemala Nature Tours",
+    "exp_tourism_period": "",
+    "exp_tourism_desc": "Family-owned tourism company. Built reports, analyzed data, and supported business decisions."
   },
   "values": {
     "title": "How I work",

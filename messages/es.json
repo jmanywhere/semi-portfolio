@@ -1,28 +1,31 @@
 {
   "nav": {
     "work": "Trabajo",
-    "writing": "Escritura",
     "about": "Sobre mí",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "toggle_theme": "Cambiar tema",
+    "switch_lang": "Switch to English"
   },
   "hero": {
     "name": "Semi Fernandez",
-    "role": "Ingeniero Senior",
+    "role": "Ingeniero de Software Senior",
     "tagline": "Construyo sistemas de producción en blockchain, frontend y backend — y la infraestructura que los mantiene funcionando.",
-    "pillars": {
-      "blockchain": "Blockchain",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "other": "Otros"
-    },
     "cta_work": "Trabajo seleccionado",
-    "cta_writing": "Escritura"
+    "cta_contact": "Hablemos",
+    "stat_1_value": "$1M+/día",
+    "stat_1_label": "volumen de transacciones",
+    "stat_2_value": "100+",
+    "stat_2_label": "equipos integradores",
+    "stat_3_value": "53",
+    "stat_3_label": "países",
+    "stat_4_value": "80s → 5s",
+    "stat_4_label": "tiempo de carga"
   },
   "pillars": {
     "title": "Lo que hago",
     "blockchain": {
       "title": "Blockchain",
-      "summary": "EVM · Solana · TON. Infraestructura multicadena, integraciones de billetera, flujos sin gas y sistemas de pago no custodiales. Sistemas que procesan $1M/día en volumen de transacciones."
+      "summary": "EVM · Solana · TON. Infraestructura multicadena, integraciones de wallet, flujos sin gas y sistemas de pago no custodiales. Sistemas que procesan $1M/día en volumen de transacciones."
     },
     "frontend": {
       "title": "Frontend",
@@ -34,18 +37,77 @@
     },
     "other": {
       "title": "Otros",
-      "summary": "Enseñanza en uDevHouse. Revisiones de seguridad de contratos inteligentes. Formación en ingeniería electrónica. Fundador y CTO de dos empresas."
+      "summary": "Enseñanza en uDevHouse. Revisiones de seguridad de smart contracts. Formación en ingeniería electrónica. Fundador y CTO de dos empresas."
     }
   },
   "projects": {
     "title": "Trabajo seleccionado",
-    "view_all": "Todos los proyectos",
-    "view_project": "Ver proyecto"
+    "items": {
+      "payments": {
+        "title": "Infraestructura de Pagos Multicadena",
+        "desc": "Sistema de pagos no custodial en EVM y Solana. Maneja hasta $1M/día en volumen de transacciones con flujos sin gas, integraciones de wallet y cobertura completa de monitoreo."
+      },
+      "platform": {
+        "title": "Plataforma para Desarrolladores y API",
+        "desc": "Plataforma API multiequipo adoptada por más de 100 equipos integradores. Propiedad total desde el diseño del sistema hasta la respuesta a incidentes y guardia."
+      },
+      "onboarding": {
+        "title": "Sistema Global de Onboarding",
+        "desc": "Rediseño de flujos de transacción y onboarding en 53 países. Redujo el tiempo de carga de ~80s a 5s y el abandono en onboarding en un 50%."
+      }
+    }
   },
-  "writing": {
-    "title": "Escritura",
-    "view_all": "Todas las publicaciones",
-    "read": "Leer"
+  "about": {
+    "title": "Sobre mí",
+    "bio_p1": "Ingeniero de software senior con más de 8 años construyendo sistemas de producción en frontend, backend e infraestructura blockchain. Mi trabajo se ha centrado en productos multicadena, flujos de pago, plataformas para desarrolladores y experiencias relacionadas con wallets en EVM, Solana y otros ecosistemas.",
+    "bio_p2": "Aporto sólida responsabilidad de extremo a extremo, sentido práctico del producto y preferencia por construir sistemas técnicamente sólidos y utilizables en el mundo real.",
+    "location": "Ciudad de Guatemala, Guatemala",
+    "certs_title": "Certificaciones",
+    "cert_1": "Certificado en Diseño de Redes Inalámbricas Unifi",
+    "cert_2": "Solidity 101 — Profesor, uDevHouse",
+    "eng_title": "Carrera de ingeniería",
+    "exp_vudy_role": "Tech Lead",
+    "exp_vudy_org": "Vudy",
+    "exp_vudy_period": "2024 – Presente",
+    "exp_vudy_desc": "Construí la arquitectura del producto desde cero, mantuve la observabilidad de un sistema que procesa $1M/día y lancé flujos de pago sin gas en más de 8 redes EVM.",
+    "exp_u3tech_role": "Fundador y CTO",
+    "exp_u3tech_org": "U3 Tech",
+    "exp_u3tech_period": "2024 – Presente",
+    "exp_u3tech_desc": "Infraestructura de pagos Web3 para empresas de LATAM. Frontends multicadena y sistemas backend para usuarios en 53 países.",
+    "exp_udevhouse_role": "Fundador y CEO",
+    "exp_udevhouse_org": "uDevHouse",
+    "exp_udevhouse_period": "2023 – Presente",
+    "exp_udevhouse_desc": "Plataforma educativa de ingeniería para desarrollo full-stack y Web3 de nivel producción. Mentoría a ingenieros en frontend, dApps y contratos inteligentes.",
+    "exp_freelance_role": "Ingeniero Full-Stack y Web3",
+    "exp_freelance_org": "Freelance",
+    "exp_freelance_period": "2021 – 2023",
+    "exp_freelance_desc": "Desarrollé funcionalidades en más de 10 proyectos de producción — dApps en React, integraciones de wallet, pipelines orientados a eventos y revisiones de seguridad en EVM, Solana y TON.",
+    "exp_anywhere_role": "Desarrollador Frontend y de Procesos",
+    "exp_anywhere_org": "Anywhere Inc.",
+    "exp_anywhere_period": "2018 – 2021",
+    "exp_anywhere_desc": "Reconstruí flujos clave de la plataforma y dashboards utilizados en varios países, modernizando el frontend con foco en usabilidad para usuarios no técnicos.",
+    "earlier_title": "Antes del software",
+    "earlier_intro": "Antes de la ingeniería de tiempo completo reparé componentes de aviónica, diseñé redes inalámbricas para edificios comerciales, ayudé a operar una empresa de turismo y pasé dos años haciendo café.",
+    "exp_barista_role": "Barista",
+    "exp_barista_org": "Ciudad de Guatemala",
+    "exp_barista_period": "2009 – 2011",
+    "exp_barista_desc": "Atención al público y preparación de café.",
+    "exp_avionics_role": "Técnico Electrónico",
+    "exp_avionics_org": "Taller de Aviónica",
+    "exp_avionics_period": "~1 año",
+    "exp_avionics_desc": "Reparación y mantenimiento de componentes electrónicos para equipos de aviación.",
+    "exp_audio_role": "Instalador de Redes y Audio",
+    "exp_audio_org": "Independiente",
+    "exp_audio_period": "",
+    "exp_audio_desc": "Diseñé e instalé redes inalámbricas empresariales para Torre Barcelona y las oficinas de Condado Naranjo en Ciudad de Guatemala. Múltiples instalaciones residenciales privadas de audio y redes. Certificado Unifi.",
+    "exp_autoshop_role": "Técnico",
+    "exp_autoshop_org": "Taller Mecánico",
+    "exp_autoshop_period": "",
+    "exp_autoshop_desc": "Trabajo técnico práctico en un entorno automotriz.",
+    "exp_tourism_role": "Desarrollo de Negocios y Analista de Datos",
+    "exp_tourism_org": "Guatemala Nature Tours",
+    "exp_tourism_period": "",
+    "exp_tourism_desc": "Empresa de turismo familiar. Construí reportes, analicé datos y apoyé decisiones de negocio."
   },
   "values": {
     "title": "Cómo trabajo",
@@ -54,7 +116,7 @@
       "body": "Comparto números reales, compromisos reales y limitaciones reales. Sin afirmaciones infladas."
     },
     "directness": {
-      "label": "Directness",
+      "label": "Claridad",
       "body": "Digo lo que pienso. Alcance claro, plazos honestos, sin adornos en la comunicación."
     },
     "equality": {
