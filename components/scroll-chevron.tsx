@@ -17,7 +17,7 @@ export function ScrollChevron() {
       aria-label="Scroll down"
       className="group flex flex-col items-center gap-2 cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
     >
-      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/50 group-hover:text-primary transition-colors duration-300">
+      <span className="font-mono text-[10px] uppercase text-foreground/50 transition-colors duration-300 group-hover:text-primary">
         scroll
       </span>
 

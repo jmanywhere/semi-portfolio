@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Mail } from "lucide-react";
+import { Mail, MessageCircle, Coffee, Blocks } from "lucide-react";
 import { siteLinks } from "@/lib/data";
 
 function GithubIcon({ size = 15 }: { size?: number }) {
@@ -50,33 +50,66 @@ export async function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-32 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground mb-4">
-          {t("title")}
-        </h2>
-        <p className="text-base text-muted-foreground mb-12 max-w-md">
-          {t("body")}
-        </p>
+    <section id="contact" className="relative overflow-hidden px-6 py-24 md:py-32">
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-[linear-gradient(135deg,color-mix(in_oklch,var(--primary),transparent_88%),transparent_55%)]" />
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 grid gap-6 md:grid-cols-[0.95fr_1.05fr] md:items-end">
+          <div>
+            <span className="font-mono text-xs uppercase text-primary">
+              {t("eyebrow")}
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-bold leading-none text-foreground md:text-5xl">
+              {t("title")}
+            </h2>
+          </div>
+          <p className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            {t("body")}
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {links.map(({ label, href, icon, mono }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith("mailto") ? undefined : "_blank"}
-              rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              className="group flex items-center gap-3 rounded-xl border border-border px-5 py-4 hover:border-primary/40 hover:bg-card transition-colors duration-200 min-w-0"
-            >
-              <span className="text-primary shrink-0">{icon}</span>
-              <div className="min-w-0">
-                <p className="text-sm font-medium text-foreground">{label}</p>
-                <p className="font-mono text-[11px] text-muted-foreground truncate">
-                  {mono}
-                </p>
+        <div className="grid gap-4 lg:grid-cols-[1fr_360px]">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            {links.map(({ label, href, icon, mono }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
+                rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                className="group flex min-w-0 items-center gap-3 rounded-md border border-border bg-card px-5 py-4 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[8px_8px_0_color-mix(in_oklch,var(--primary),transparent_72%)]"
+              >
+                <span className="shrink-0 text-primary">{icon}</span>
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-foreground">{label}</p>
+                  <p className="truncate font-mono text-[11px] text-muted-foreground">
+                    {mono}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <aside className="rounded-md border border-primary/25 bg-card p-5 shadow-[8px_8px_0_color-mix(in_oklch,var(--primary),transparent_72%)]">
+            <p className="font-display text-2xl font-bold leading-none text-foreground">
+              {t("signal_title")}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {t("signal_body")}
+            </p>
+            <div className="mt-5 grid gap-2 text-sm text-foreground">
+              <div className="flex items-center gap-2">
+                <MessageCircle size={15} className="text-primary" aria-hidden />
+                <span>{t("signal_1")}</span>
               </div>
-            </a>
-          ))}
+              <div className="flex items-center gap-2">
+                <Blocks size={15} className="text-primary" aria-hidden />
+                <span>{t("signal_2")}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Coffee size={15} className="text-primary" aria-hidden />
+                <span>{t("signal_3")}</span>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>

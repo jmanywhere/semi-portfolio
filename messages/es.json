@@ -42,17 +42,26 @@
   },
   "projects": {
     "title": "Trabajo seleccionado",
+    "intro": "Tres pruebas de sistemas en producción: dinero movido, equipos integrados y personas incorporadas.",
+    "links": {
+      "landing": "Landing",
+      "app": "App",
+      "previous": "Versión anterior"
+    },
     "items": {
       "payments": {
         "title": "Infraestructura de Pagos Multicadena",
+        "metric": "$1M/día",
         "desc": "Sistema de pagos no custodial en EVM y Solana. Maneja hasta $1M/día en volumen de transacciones con flujos sin gas, integraciones de wallet y cobertura completa de monitoreo."
       },
       "platform": {
         "title": "Plataforma para Desarrolladores y API",
+        "metric": "100+ equipos",
         "desc": "Plataforma API multiequipo adoptada por más de 100 equipos integradores. Propiedad total desde el diseño del sistema hasta la respuesta a incidentes y guardia."
       },
       "onboarding": {
         "title": "Sistema Global de Onboarding",
+        "metric": "80s a 5s",
         "desc": "Rediseño de flujos de transacción y onboarding en 53 países. Redujo el tiempo de carga de ~80s a 5s y el abandono en onboarding en un 50%."
       }
     }
@@ -61,6 +70,8 @@
     "title": "Sobre mí",
     "bio_p1": "Ingeniero de software senior con más de 8 años construyendo sistemas de producción en frontend, backend e infraestructura blockchain. Mi trabajo se ha centrado en productos multicadena, flujos de pago, plataformas para desarrolladores y experiencias relacionadas con wallets en EVM, Solana y otros ecosistemas.",
     "bio_p2": "Aporto sólida responsabilidad de extremo a extremo, sentido práctico del producto y preferencia por construir sistemas técnicamente sólidos y utilizables en el mundo real.",
+    "arc_title": "aviónica → pagos",
+    "arc_body": "Reparación de hardware, redes, servicio de café, operaciones de turismo y luego software de producción. El hilo común son sistemas que no se pueden improvisar.",
     "location": "Ciudad de Guatemala, Guatemala",
     "certs_title": "Certificaciones",
     "cert_1": "Certificado en Diseño de Redes Inalámbricas Unifi",
@@ -111,9 +122,19 @@
   },
   "values": {
     "title": "Cómo trabajo",
+    "eyebrow": "Forma de operar",
+    "intro": "Me importa el oficio, pero me importa más lo que ese oficio hace por las personas. El mejor trabajo se siente como un equipo donde todos se vuelven más fuertes.",
     "transparency": {
       "label": "Transparencia",
       "body": "Comparto números reales, compromisos reales y limitaciones reales. Sin afirmaciones infladas."
+    },
+    "teamwork": {
+      "label": "Equipo y mentoría",
+      "body": "Disfruto ayudar a otras personas a subir de nivel, y espero que las personas a mi alrededor también me ayuden a subir de nivel. Los buenos equipos hacen que el feedback sea normal, generoso y útil."
+    },
+    "purpose": {
+      "label": "Propósito mayor",
+      "body": "Quiero que los sistemas que construyo importen más allá de un dashboard: infraestructura útil para comunidades, mejor acceso para personas y productos que mejoren vidas reales."
     },
     "directness": {
       "label": "Claridad",
@@ -130,7 +151,13 @@
   },
   "contact": {
     "title": "Hablemos",
-    "body": "Abierto a nuevos proyectos, colaboraciones y conversaciones.",
+    "eyebrow": "Canal abierto",
+    "body": "Abierto a trabajo de producto serio, infraestructura Web3, plataformas para desarrolladores y conversaciones con builders que se preocupan por la utilidad, no solo por el ruido.",
+    "signal_title": "Buenas razones para escribir",
+    "signal_body": "Las mejores conversaciones empiezan con un problema concreto, un sistema complicado o un equipo que quiere otro senior builder en la mesa.",
+    "signal_1": "Arquitectura, producto o dirección técnica",
+    "signal_2": "Pagos, wallets, infraestructura u onboarding",
+    "signal_3": "Mentoría, enseñanza y trabajo comunitario",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn"

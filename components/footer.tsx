@@ -4,8 +4,8 @@ export async function Footer() {
   const t = await getTranslations("footer");
 
   return (
-    <footer className="border-t border-border py-8 px-6">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground/60 font-mono">
+    <footer className="border-t border-border px-6 py-8">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 font-mono text-xs text-muted-foreground/60 sm:flex-row">
         <span>© {new Date().getFullYear()} Semi Fernandez</span>
         <span>{t("built_with")}</span>
       </div>

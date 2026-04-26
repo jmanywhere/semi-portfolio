@@ -15,56 +15,59 @@ export async function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-dvh flex flex-col justify-center px-6 pt-20 pb-16 overflow-hidden"
+      className="relative min-h-dvh flex flex-col justify-center px-6 pt-24 pb-16 overflow-hidden"
     >
-      {/* Interactive background */}
       <HeroCanvas />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto w-full">
-        {/* Eyebrow */}
-        <p className="font-mono text-xs text-muted-foreground tracking-widest uppercase mb-6 animate-fade-in">
-          semi.engineer
-        </p>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_32%,color-mix(in_oklch,var(--accent),transparent_64%),transparent_34%),linear-gradient(110deg,var(--background)_0%,color-mix(in_oklch,var(--background),transparent_10%)_46%,transparent_72%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
-        {/* Name + role */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-foreground leading-[1.05] mb-4 animate-fade-in [animation-delay:80ms]">
-          {t("name")}
-        </h1>
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-end gap-10 md:grid-cols-[minmax(0,1.05fr)_360px]">
+        <div>
+          <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-foreground/15 bg-background/75 px-3 py-1.5 text-xs font-medium text-foreground shadow-sm backdrop-blur-md animate-fade-in">
+            <span className="size-2 rounded-full bg-primary shadow-[0_0_0_5px_color-mix(in_oklch,var(--primary),transparent_80%)]" />
+            <span className="font-mono">semi.engineer</span>
+            <span className="hidden text-muted-foreground sm:inline">production systems, shipped</span>
+          </div>
 
-        <p className="text-lg sm:text-xl text-primary font-medium mb-6 animate-fade-in [animation-delay:140ms]">
-          {t("role")}
-        </p>
+          <h1 className="font-display max-w-4xl text-5xl font-bold leading-[0.95] text-foreground sm:text-7xl md:text-8xl animate-fade-in [animation-delay:80ms]">
+            {t("name")}
+          </h1>
 
-        {/* Tagline */}
-        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-10 animate-fade-in [animation-delay:200ms]">
-          {t("tagline")}
-        </p>
+          <p className="mt-5 max-w-2xl text-xl font-semibold text-primary sm:text-2xl animate-fade-in [animation-delay:140ms]">
+            {t("role")}
+          </p>
 
-        {/* CTAs */}
-        <div className="flex flex-wrap gap-3 mb-16 animate-fade-in [animation-delay:260ms]">
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-          >
-            {t("cta_work")}
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border text-sm font-medium text-foreground hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-          >
-            {t("cta_contact")}
-          </a>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg animate-fade-in [animation-delay:200ms]">
+            {t("tagline")}
+          </p>
+
+          <div className="mt-9 flex flex-wrap gap-3 animate-fade-in [animation-delay:260ms]">
+            <a
+              href="#work"
+              className="inline-flex items-center gap-2 rounded-md bg-foreground px-5 py-3 text-sm font-semibold text-background shadow-[6px_6px_0_color-mix(in_oklch,var(--primary),transparent_20%)] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              {t("cta_work")}
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-md border border-foreground/20 bg-background/70 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-md transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              {t("cta_contact")}
+            </a>
+          </div>
         </div>
 
-        {/* Stats row */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 animate-fade-in [animation-delay:320ms]">
+        <div className="grid grid-cols-2 gap-3 rounded-md border border-foreground/15 bg-background/70 p-3 shadow-[10px_10px_0_color-mix(in_oklch,var(--foreground),transparent_92%)] backdrop-blur-md animate-fade-in [animation-delay:320ms]">
           {stats.map(({ value, label }) => (
-            <div key={label} className="flex flex-col gap-1">
-              <span className="font-mono text-xl font-semibold text-foreground tabular-nums">
+            <div
+              key={label}
+              className="min-h-28 min-w-0 overflow-hidden rounded-sm border border-border/80 bg-card/80 p-3 sm:p-4"
+            >
+              <span className="block max-w-full font-display text-[1.6rem] font-bold leading-none text-foreground tabular-nums sm:text-[1.75rem]">
                 {value}
               </span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wide">
+              <span className="mt-3 block text-[11px] font-medium uppercase leading-snug text-muted-foreground sm:text-xs">
                 {label}
               </span>
             </div>
@@ -72,7 +75,6 @@ export async function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:block">
         <ScrollChevron />
       </div>

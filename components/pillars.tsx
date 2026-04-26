@@ -17,14 +17,14 @@ export async function Pillars() {
   const pillars: PillarKey[] = ["blockchain", "frontend", "backend", "other"];
 
   return (
-    <section id="skills" className="py-24 md:py-32 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground mb-12">
+    <section id="skills" className="px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="mb-12 font-display text-3xl font-bold leading-none text-foreground md:text-5xl">
           {t("title")}
         </h2>
 
-        <div className="grid sm:grid-cols-2 gap-4">
-          {pillars.map((key) => {
+        <div className="grid gap-4 sm:grid-cols-2">
+          {pillars.map((key, index) => {
             const Icon = icons[key];
             const isPrimary = key === "blockchain";
 
@@ -32,27 +32,30 @@ export async function Pillars() {
               <div
                 key={key}
                 className={cn(
-                  "group rounded-xl border border-border p-6 transition-colors duration-200",
-                  "hover:border-primary/40 hover:bg-card"
+                  "group relative overflow-hidden rounded-md border border-border bg-background/70 p-6 transition duration-300",
+                  "hover:-translate-y-1 hover:border-primary/45 hover:bg-card"
                 )}
               >
+                <span className="absolute -right-3 -top-5 font-display text-8xl font-bold leading-none text-foreground/[0.035]">
+                  {index + 1}
+                </span>
                 <div className="flex items-start gap-4">
                   <div
                     className={cn(
-                      "shrink-0 size-9 rounded-lg flex items-center justify-center",
+                      "flex size-10 shrink-0 items-center justify-center rounded-sm border",
                       isPrimary
-                        ? "bg-primary/10 text-primary"
-                        : "bg-muted text-muted-foreground group-hover:text-foreground transition-colors"
+                        ? "border-primary/30 bg-primary text-primary-foreground"
+                        : "border-border bg-muted text-muted-foreground transition-colors group-hover:text-foreground"
                     )}
                   >
                     <Icon size={16} />
                   </div>
 
                   <div className="min-w-0">
-                    <h3 className="text-sm font-semibold text-foreground mb-2">
+                    <h3 className="mb-2 text-base font-semibold text-foreground">
                       {t(`${key}.title`)}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
                       {t(`${key}.summary`)}
                     </p>
                   </div>

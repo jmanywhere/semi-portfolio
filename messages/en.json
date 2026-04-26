@@ -42,17 +42,26 @@
   },
   "projects": {
     "title": "Selected work",
+    "intro": "Three proof points from production systems: money moved, teams integrated, people onboarded.",
+    "links": {
+      "landing": "Landing",
+      "app": "App",
+      "previous": "Previous version"
+    },
     "items": {
       "payments": {
         "title": "Multichain Payment Infrastructure",
+        "metric": "$1M/day",
         "desc": "Non-custodial payment system across EVM and Solana. Handles up to $1M/day in transaction volume with gasless flows, wallet integrations, and full monitoring coverage."
       },
       "platform": {
         "title": "Developer Platform & API",
+        "metric": "100+ teams",
         "desc": "Multi-team API platform and developer tooling adopted by 100+ integrating teams. Full ownership from system design through incident response and on-call."
       },
       "onboarding": {
         "title": "Global Onboarding System",
+        "metric": "80s to 5s",
         "desc": "Rebuilt transaction and onboarding flows across 53 countries. Cut page load from ~80s to 5s and reduced onboarding churn by 50%."
       }
     }
@@ -61,6 +70,8 @@
     "title": "About",
     "bio_p1": "Senior software engineer with 8+ years building production systems across frontend, backend, and blockchain infrastructure. My work has focused on multichain products, payment flows, developer platforms, and wallet-adjacent experiences across EVM, Solana, and other ecosystems.",
     "bio_p2": "I bring strong end-to-end ownership, practical product sense, and a bias toward building systems that are both technically sound and usable in the real world.",
+    "arc_title": "avionics → payments",
+    "arc_body": "Hardware repair, networks, coffee service, tourism ops, then production software. The throughline is systems that cannot be hand-waved.",
     "location": "Guatemala City, Guatemala",
     "certs_title": "Certifications",
     "cert_1": "Unifi Wireless Network Design Certified",
@@ -111,9 +122,19 @@
   },
   "values": {
     "title": "How I work",
+    "eyebrow": "Operating style",
+    "intro": "I care about the craft, but I care more about what the craft does for people. The best work feels like a room where everyone gets sharper.",
     "transparency": {
       "label": "Transparency",
       "body": "I share real numbers, real tradeoffs, and real limitations. No inflated claims."
+    },
+    "teamwork": {
+      "label": "Teamwork & mentorship",
+      "body": "I enjoy helping people level up, and I expect to be leveled up by the people around me. Strong teams make feedback normal, generous, and useful."
+    },
+    "purpose": {
+      "label": "Higher purpose",
+      "body": "I want the systems I build to matter beyond a dashboard: useful infrastructure for communities, better access for people, and products that improve real lives."
     },
     "directness": {
       "label": "Directness",
@@ -130,7 +151,13 @@
   },
   "contact": {
     "title": "Get in touch",
-    "body": "Open to new projects, collaborations, and conversations.",
+    "eyebrow": "Open channel",
+    "body": "Open to serious product work, Web3 infrastructure, developer platforms, and conversations with builders who care about usefulness, not just noise.",
+    "signal_title": "Good reasons to reach out",
+    "signal_body": "The best conversations start with a concrete problem, a messy system, or a team that wants another senior builder in the room.",
+    "signal_1": "Architecture, product, or technical direction",
+    "signal_2": "Payments, wallets, infra, or onboarding flows",
+    "signal_3": "Mentorship, teaching, and community work",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn"

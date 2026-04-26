@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ─── Ink Indigo Design Tokens ─────────────────────────────── */
+/* ─── Workshop Design Tokens ───────────────────────────────── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -26,6 +26,7 @@
   --color-ring: var(--ring);
 
   --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-syne);
   --font-mono: var(--font-geist-mono);
 
   --radius-sm: calc(var(--radius) * 0.6);
@@ -41,58 +42,53 @@
 
 /* ─── Light Mode ────────────────────────────────────────────── */
 :root {
-  /* Surfaces — near-white with a whisper of violet */
-  --background:          oklch(0.99 0.002 286);
-  --foreground:          oklch(0.13 0.03  286);
-  --card:                oklch(0.97 0.003 286);
-  --card-foreground:     oklch(0.13 0.03  286);
-  --popover:             oklch(0.99 0.002 286);
-  --popover-foreground:  oklch(0.13 0.03  286);
+  --background:          oklch(0.985 0.012 84);
+  --foreground:          oklch(0.17 0.026 201);
+  --card:                oklch(0.965 0.014 84);
+  --card-foreground:     oklch(0.17 0.026 201);
+  --popover:             oklch(0.985 0.012 84);
+  --popover-foreground:  oklch(0.17 0.026 201);
 
-  /* Primary = Ink Indigo accent — links, focus ring, one primary CTA only */
-  --primary:             oklch(0.47 0.16  280);
-  --primary-foreground:  oklch(0.99 0    0);
+  --primary:             oklch(0.55 0.145 177);
+  --primary-foreground:  oklch(0.985 0.012 84);
 
-  /* Supporting surfaces */
-  --secondary:           oklch(0.95 0.005 286);
-  --secondary-foreground:oklch(0.13 0.03  286);
-  --muted:               oklch(0.95 0.004 286);
-  --muted-foreground:    oklch(0.52 0.015 286);
-  --accent:              oklch(0.95 0.005 286);
-  --accent-foreground:   oklch(0.13 0.03  286);
+  --secondary:           oklch(0.92 0.035 88);
+  --secondary-foreground:oklch(0.17 0.026 201);
+  --muted:               oklch(0.93 0.018 84);
+  --muted-foreground:    oklch(0.45 0.026 201);
+  --accent:              oklch(0.78 0.145 66);
+  --accent-foreground:   oklch(0.17 0.026 201);
 
   --destructive:         oklch(0.577 0.245 27.325);
-  --border:              oklch(0.88 0.007 286);
-  --input:               oklch(0.88 0.007 286);
-  --ring:                oklch(0.47 0.16  280);
-  --radius:              0.625rem;
+  --border:              oklch(0.80 0.023 84);
+  --input:               oklch(0.80 0.023 84);
+  --ring:                oklch(0.55 0.145 177);
+  --radius:              0.5rem;
 }
 
 /* ─── Dark Mode ─────────────────────────────────────────────── */
 .dark {
-  /* Surfaces — near-black with a whisper of violet */
-  --background:          oklch(0.10 0.008 286);
-  --foreground:          oklch(0.93 0.004 286);
-  --card:                oklch(0.14 0.008 286);
-  --card-foreground:     oklch(0.93 0.004 286);
-  --popover:             oklch(0.14 0.008 286);
-  --popover-foreground:  oklch(0.93 0.004 286);
+  --background:          oklch(0.12 0.018 201);
+  --foreground:          oklch(0.94 0.011 84);
+  --card:                oklch(0.17 0.022 201);
+  --card-foreground:     oklch(0.94 0.011 84);
+  --popover:             oklch(0.16 0.022 201);
+  --popover-foreground:  oklch(0.94 0.011 84);
 
-  /* Primary — slightly brighter in dark to stay accessible */
-  --primary:             oklch(0.63 0.17  280);
-  --primary-foreground:  oklch(0.10 0.008 286);
+  --primary:             oklch(0.73 0.148 177);
+  --primary-foreground:  oklch(0.11 0.018 201);
 
-  --secondary:           oklch(0.19 0.010 286);
-  --secondary-foreground:oklch(0.93 0.004 286);
-  --muted:               oklch(0.19 0.010 286);
-  --muted-foreground:    oklch(0.62 0.012 286);
-  --accent:              oklch(0.19 0.010 286);
-  --accent-foreground:   oklch(0.93 0.004 286);
+  --secondary:           oklch(0.22 0.028 201);
+  --secondary-foreground:oklch(0.94 0.011 84);
+  --muted:               oklch(0.23 0.024 201);
+  --muted-foreground:    oklch(0.72 0.018 84);
+  --accent:              oklch(0.79 0.15 66);
+  --accent-foreground:   oklch(0.11 0.018 201);
 
   --destructive:         oklch(0.704 0.191 22.216);
-  --border:              oklch(1 0 0 / 9%);
-  --input:               oklch(1 0 0 / 12%);
-  --ring:                oklch(0.63 0.17  280);
+  --border:              oklch(1 0 0 / 12%);
+  --input:               oklch(1 0 0 / 14%);
+  --ring:                oklch(0.73 0.148 177);
 }
 
 /* ─── Entrance Animation ─────────────────────────────────────── */
@@ -131,6 +127,16 @@
     @apply bg-background text-foreground;
     min-height: 100dvh;
     line-height: 1.6;
+    background-image:
+      linear-gradient(to right, color-mix(in oklch, var(--border), transparent 72%) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklch, var(--border), transparent 72%) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: center top;
+  }
+
+  ::selection {
+    background: color-mix(in oklch, var(--accent), transparent 25%);
+    color: var(--accent-foreground);
   }
 
   /* Visible focus rings — never remove these */

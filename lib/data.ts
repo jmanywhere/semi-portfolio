@@ -4,6 +4,11 @@ export type Project = {
   id: string;
   domain: ProjectDomain;
   tags: string[];
+  links?: Array<{
+    labelKey: string;
+    href: string;
+    localizedPath?: string;
+  }>;
 };
 
 export const projects: Project[] = [
@@ -11,6 +16,21 @@ export const projects: Project[] = [
     id: "payments",
     domain: "blockchain",
     tags: ["Blockchain", "Solana", "EVM", "Node.js", "AWS"],
+    links: [
+      {
+        labelKey: "landing",
+        href: "https://vudy.app",
+      },
+      {
+        labelKey: "app",
+        href: "https://vudy.app",
+        localizedPath: "login",
+      },
+      {
+        labelKey: "previous",
+        href: "https://vudy.me/login",
+      },
+    ],
   },
   {
     id: "platform",

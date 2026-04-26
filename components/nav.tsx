@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useTheme } from "next-themes";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -14,22 +14,17 @@ export function Nav() {
   const { theme, setTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 16);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   const otherLocale = locale === "en" ? "es" : "en";
   const otherLocaleLabel = locale === "en" ? "ES" : "EN";
@@ -42,10 +37,10 @@ export function Nav() {
 
   return (
     <header
-      className={cn(
+        className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
+          ? "border-b border-border bg-background/88 backdrop-blur-md"
           : "bg-transparent"
       )}
     >
@@ -56,10 +51,10 @@ export function Nav() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="font-display text-lg font-bold text-foreground transition-colors hover:text-primary"
           aria-label="Semi Fernandez — home"
         >
-          semi.engineer
+          semi
         </Link>
 
         {/* Desktop nav */}
@@ -68,7 +63,7 @@ export function Nav() {
             <a
               key={href}
               href={href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {label}
             </a>
@@ -80,7 +75,7 @@ export function Nav() {
           {/* Language toggle */}
           <Link
             href={pathname} locale={otherLocale as "en" | "es"}
-            className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
+            className="font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
             aria-label={t("switch_lang")}
           >
             {otherLocaleLabel}
@@ -108,7 +103,7 @@ export function Nav() {
         <div className="flex md:hidden items-center gap-3">
           <Link
             href={pathname} locale={otherLocale as "en" | "es"}
-            className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
+            className="font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
             aria-label={t("switch_lang")}
           >
             {otherLocaleLabel}
@@ -142,11 +137,11 @@ export function Nav() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "md:hidden overflow-hidden transition-all duration-200",
+        "md:hidden overflow-hidden transition-all duration-200",
           menuOpen ? "max-h-48" : "max-h-0"
         )}
       >
-        <div className="px-6 pb-4 border-b border-border bg-background/95 backdrop-blur-md flex flex-col gap-4">
+        <div className="flex flex-col gap-4 border-b border-border bg-background/95 px-6 pb-4 backdrop-blur-md">
           {navLinks.map(({ href, label }) => (
             <a
               key={href}
